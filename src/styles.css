@@ -1,0 +1,92 @@
+.App {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin: 10px 0;
+  }
+  
+  button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #ffcb05;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #ff9005;
+  }
+  
+
+  /* Details Styles */
+.pokemon-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.pokemon-details img {
+  width: 150px;
+  height: 150px;
+}
+
+.pokemon-details h2 {
+  margin: 20px 0;
+}
+
+/* Type-specific card backgrounds */
+.pokemon-card {
+  border-radius: 10px;
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.electric {
+  background-color: #ffea70;
+}
+
+.fire {
+  background-color: #ff6f61;
+}
+
+.water {
+  background-color: #4fc3f7;
+}
+
+.grass {
+  background-color: #81c784;
+}
+
+.rock {
+  background-color: #b6a136;
+}
+
+.psychic {
+  background-color: #f48fb1;
+}
+
+.ice {
+  background-color: #b3e5fc;
+}
+
+.fighting {
+  background-color: #d32f2f;
+}
+
+.ghost {
+  background-color: #7e57c2;
+}
+
+.dragon {
+  background-color: #f16e57;
+}
