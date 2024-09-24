@@ -200,16 +200,18 @@ th, td {
   padding: 0px;
   text-align: left;
   border-bottom: 1px solid #ddd;
-  font-family: 'Poppins', sans-serif; /* Font: Poppins */
-  font-weight: 700;                   /* Weight: 700 (bold) */
-  font-size: 10px;                    /* Font size: 10px */
-  line-height: 16px;                  /* Line height: 16px */
+  font-family: 'Poppins', sans-serif; 
+  font-weight: 700;                   
+  font-size: 10px;                   
+  line-height: 16px;                  
   text-align: right; 
+  margin: 0%;
 }
 
 th {
   background-color: #f9f9f9;
   color: black;
+  
 }
 tr{
   color: black;
@@ -317,4 +319,19 @@ tr:hover {
   width: 312px;
   height: 96px;
   gap: 8px;
+}
+
+.skill-bar {
+  width: 100%;                  /* Full width for the container */
+  height: 4px;                 /* Height of the skill bar */
+  background-color: #e0e0e0;    /* Background color (grey) */
+  border-radius: 8px;           /* Rounded corners */
+  overflow: hidden;             /* Ensures the fill stays within bounds */              /* Space between the bars */
+}
+
+.skill-bar .fill {
+  height: 100%;                 /* The fill takes the full height */
+  background-color: #6890f0;    /* Fill color (same as your text color) */
+  border-radius: 8px;           /* Rounded corners */
+  transition: width 0.5s ease;  /* Smooth transition for width change */
 }

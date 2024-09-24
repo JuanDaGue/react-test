@@ -89,31 +89,41 @@ const PokemonDetails = () => {
         </div>   
 
         <div className="table-container">
- 
-      <h2 style={{ color: color }}>Pokémon Stats</h2>
-      <table>
-        <thead>
-          <tr>
-            <th style={{ color: color }}>Stat Name</th>
-            <th style={{ color: color }}>Base Stat</th>
-            <th style={{ color: color }}>Effort</th>
-          </tr>
-        </thead>
-        <tbody>
-          {pokedetails.stats.map((stat, index) => (
-            <tr key={index}>
-              <td >
-                <a  style={{ color: color }} href={stat.stat.url} target="_blank" rel="noopener noreferrer">
-                  {stat.stat.name}
-                </a>
-              </td>
-              <td>{stat.base_stat}</td>
-              <td>{stat.effort}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+  <h2 style={{ color: color }}>Pokémon Stats</h2>
+  <table>
+  <thead>
+    <tr>
+      <th style={{ color: color }}>Stat Name</th>
+      <th style={{ color: color }}>Base Stat</th>
+      <th style={{ color: color }}>Skill Bar</th>
+    </tr>
+  </thead>
+  <tbody>
+    {pokedetails.stats.map((stat, index) => (
+      <tr key={index}>
+        <td className="stat-name">
+          <a
+            style={{ color: color }}
+            href={stat.stat.url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {stat.stat.name}
+          </a>
+        </td>
+        <td className="base-stat">{stat.base_stat}</td>
+        <td>
+          <div className="skill-bar">
+            <div className="fill" style={{ width: `${stat.base_stat}%` }}></div>
+          </div>
+        </td>
+      </tr>
+    ))}
+  </tbody>
+</table>
+
+</div>
+
       </div>
 
     </div>
