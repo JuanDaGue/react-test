@@ -1,6 +1,7 @@
 import React, { createContext, useState } from 'react';
 import AppReducer from './AppReducer';
-
+import { GET_ALL_POKEMONS } from '../graphql/queries';
+import { useQuery } from '@apollo/client';
 // Initial state
 const initialState = {
     pokemons: [],
@@ -11,9 +12,12 @@ const initialState = {
 // Create context
 export const GlobalContext = createContext(initialState);
 export const GlobalProvider = ({ children }) => {
+//   const { loading, error, data } = useQuery(GET_ALL_POKEMONS);
+
   const [searchTerm, setSearchTerm] = useState('');
   const [sortedPokemon, setSortedPokemon] = useState([]);
   const [sortBy, setSortBy] = useState('id'); // Default sorting by ID
+  const [filter, setFilter] = useState('');
 
   const handleSearch = (e) => {
     setSearchTerm(e.target.value);
@@ -53,6 +57,8 @@ export const GlobalProvider = ({ children }) => {
         // addFavorite,
         // removeFavorite,
         // setFilterType,
+        filter, 
+        setFilter,
       }}
     >
       {children}
