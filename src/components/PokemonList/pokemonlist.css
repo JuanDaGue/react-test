@@ -6,4 +6,6 @@
   background-color: #FFFFFF;
   width: 352px;
   height: 524px;
+  align-content: flex-start;
+  border-radius: 8px;
 }

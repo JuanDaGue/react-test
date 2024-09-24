@@ -5,8 +5,8 @@ import './pokemoncard.css'
 const PokemonCard = ({ pokemon }) => {
   return (
     <div className="pokemon-card">
-      {/* <p className='id'>{pokemon.id}</p>   */}
-      <Link to={`/pokemon/${pokemon.name}`}>
+      <Link to={`/pokemon/${pokemon.id}`}>  
+        <h6 className='id'>#0{pokemon.id}</h6>
         <img src={pokemon.imagen} alt={pokemon.name} />
         <h3>{pokemon.name}</h3>
       </Link>

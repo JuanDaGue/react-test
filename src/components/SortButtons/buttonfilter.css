@@ -1,0 +1,16 @@
+.buttonFilter{
+    background-color: #FFFFFF;
+    width: 16px;
+    height: 16px;
+    border-radius: 16px;
+    padding: 8px;
+    gap: 8px;
+    cursor: pointer;
+    margin-left: 8px;
+}
+.buttonFilter img{
+    width: 11.07px;
+    height: 10.67px;
+    top: 2.67px;
+    left: 2.46px;
+}

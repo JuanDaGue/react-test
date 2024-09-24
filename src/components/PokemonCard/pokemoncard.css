@@ -1,40 +1,64 @@
 
   .pokemon-card {
+    margin: 0%;
+    padding: 0%;
     background-color: #f8f9fa;
     border: 1px solid #ddd;
     border-radius: 8px;
-
     text-align: center;
     width: 104px;
     height: 108px;
     left: 2669px;
     box-shadow: 0px 1px 3px 1px #00000033;
-    /* Add other styles as needed */
+    
   }
   
 
   
   .pokemon-card img {
+    margin: 0%;
+    padding: 0%;
     max-width: 72px;
     height: 72px;
+   
   }
   
   .pokemon-card h3 {
-    width: 88px;
-    height: 16px;
+
+    margin: 0%;
+    padding: 16px 0px 4px 0px;
+    /* padding-top: 8px; */
+    color: black;
+    width: 104px;
+    height: 30px;
     font-family: 'Poppins', sans-serif;  
     font-weight: 400;                    
     font-size: 10px;                     
     line-height: 16px;                  
-    text-align: center;                 
-    margin: 0;
+    text-align: center;
+    text-decoration: none;        /* Removes underline */
+    text-transform: capitalize;   
+    background-color: #EFEFEF;
+    border-radius: 7px;
+    position: relative;           /* Posición relativa para ajustar su desplazamiento */
+    top: -20px;
+    z-index: 1;             
   }
-p.id{
-    top: 0%;
+
+
+  h6.id{
+    position: absolute;
+    padding: 0%;
+    margin: 0%;
     text-align: right;
-    width: 104px;
+    width: 90px;
     height: 16px;
     padding: 4px 8px 0px 8px;
     gap: 8px;
-    color: black;
+    font-family: 'Poppins', sans-serif;  /* Fuente Poppins */
+    font-weight: 400;                    /* Peso de la fuente: normal */
+    font-size: 8px;                      /* Tamaño de la fuente: 8px */
+    line-height: 12px;                   /* Altura de la línea: 12px */
+    text-align: righ;
+    color: #666666;
 }

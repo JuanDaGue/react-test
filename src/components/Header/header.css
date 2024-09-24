@@ -1,0 +1,32 @@
+.header{
+    flex: content;
+    width: 352px;
+    height: auto;
+    padding: 12px 12px 24px 12px;
+    gap: 8px;
+  }
+  
+  .pokefilters{
+    display: flex;
+  }
+  .pokedex img{
+    width: 24px;
+    height: 24px;
+    padding-right: 2%;
+    left: 0.12px;
+    align-items: center;
+  }
+  .pokedex h1{
+    width: 106px;            /* Fixed width */
+    height: 32px;            /* Fixed height */
+    font-family: 'Poppins', sans-serif; /* Font family Poppins */
+    font-weight: 700;        /* Font weight */
+    font-size: 24px;         /* Font size */
+    line-height: 32px;       /* Line height */
+    margin: 0;               /* Reset margin if necessary */
+    overflow: hidden;   
+  }
+  
+  .pokedex{
+    display: flex;
+  }

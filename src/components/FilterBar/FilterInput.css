@@ -3,7 +3,8 @@
     width: 352px;
     height: 18px;
     padding: 12px 12px 24px 12px;
-
+    display: contents;
+    
   }
   
   .filter-input {
@@ -24,4 +25,4 @@
     pointer-events: none; /* Ensure the icon doesn't block input interactions */
     color: red; /* Set the icon color to red */
   }
-  
+ 
