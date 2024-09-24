@@ -26,7 +26,7 @@ const PokemonList = ({ addFavorite }) => {
 
   return (
     
-<div>
+<div className='homecard'>
 {/* <div className='header'>
                 <div className='pokedex'>
                   <img src="../../public/pokeball.png" alt="Pokeball"         className="pokeball-icon" />

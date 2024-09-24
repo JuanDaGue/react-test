@@ -1,12 +1,20 @@
 import React, { useState, useContext, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams,  useNavigate  } from 'react-router-dom';
 import { getPokemonDetailsApi } from "../../Api/pokemons";
 import getColorByPokemonType from '../../Api/utils/getColorByPokemonType';
 import { GlobalContext } from '../../context/GlobalState';
 import './pokemondetails.css';
 import ReactDOM from 'react-dom';
-
+// import arrowBackIcon from '../../../public/arrow-back.png';
 const PokemonDetails = () => {
+
+  const navigate = useNavigate();
+
+  const handleHomeButtonClick = () => {
+    navigate('/'); // Navigate to the home page
+  };
+
+  
   const [pokedetails, setPokedetails] = useState(null);
   const { id } = useParams();
   const { pType, setPType } = useContext(GlobalContext);
@@ -41,9 +49,16 @@ const PokemonDetails = () => {
   // console.log(color);
   //style={{ backgroundColor: color }}
   return (
-    <div >
-      <h2>{pokedetails.name}</h2>
-      <img src={pokedetails.sprites.other["official-artwork"].front_default} alt={pokedetails.name} className='imgdetail' />
+    <div className='homecard' style={{ backgroundColor: color }}>
+        <img src="../../../public/pokeball2.png" alt="pokeball2.png" className='imgbg'/>
+      <div className='title'>
+        <button className='history' onClick={handleHomeButtonClick} style={{ backgroundColor: color }}>    <img  src='../../../public/arrow_back.png' alt="Back Arrow"/></button>
+        <h2>{pokedetails.name}</h2>
+        <p className='pokeid'>{`#0${id}`}</p>
+      </div>
+      <div className='imgp'>
+        <img src={pokedetails.sprites.other["official-artwork"].front_default} alt={pokedetails.name} className='imgdetail' />
+      </div>
       <div className='detailcard'>
         <div className='poketype'>
           <p style={{ backgroundColor: color }}>{pokedetails.types[0].type.name}</p>
@@ -113,8 +128,8 @@ const PokemonDetails = () => {
         </td>
         <td className="base-stat">{stat.base_stat}</td>
         <td>
-          <div className="skill-bar">
-            <div className="fill" style={{ width: `${stat.base_stat}%` }}></div>
+          <div className="skill-bar" >
+            <div className="fill" style={{ width: `${stat.base_stat}%`, backgroundColor: color }}></div>
           </div>
         </td>
       </tr>

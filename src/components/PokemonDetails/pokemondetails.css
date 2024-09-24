@@ -26,6 +26,8 @@
   padding: 16px 20px;
   position: relative;
   top: 0px;
+  z-index: 2;
+  position: relative;
 }
 .detailcard{
   width: 352px;
@@ -334,4 +336,61 @@ tr:hover {
   background-color: #6890f0;    /* Fill color (same as your text color) */
   border-radius: 8px;           /* Rounded corners */
   transition: width 0.5s ease;  /* Smooth transition for width change */
+}
+
+
+.imgp {
+  margin: 0%;
+  padding: 0%;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  width: 320px;
+  /* height: 100%; */
+}
+
+.title{
+  width: 352px; 
+  height: 76px; 
+  /* padding: 20px 20px 24px 20px;  */
+  gap: 8px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  margin: 0%;
+}
+
+.title .history{
+  width: 32px;
+  height: 32px;
+  position: relative;
+  margin: 0%;
+  padding: 0%;  
+}
+.title h2{
+  width: 229px; 
+  height: 32px; 
+  font-family: 'Poppins', sans-serif; 
+  font-weight: 700; 
+  font-size: 24px; 
+  line-height: 32px;
+  text-transform: capitalize; /* Capitalize the first letter */
+  font-weight: bold;
+}
+.pokeid{
+  width: 35px; 
+  height: 16px; 
+  font-family: 'Poppins', sans-serif; 
+  font-weight: 700; 
+  font-size: 12px; 
+  line-height: 16px; 
+  font-weight: bold;
+}
+.history img{
+  width: 32px;
+  height: 32px;
+  position: relative;
+  left: 0%;
+  
+
 }
