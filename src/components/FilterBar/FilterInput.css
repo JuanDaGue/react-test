@@ -1,0 +1,27 @@
+.filter-input-container {
+    position: relative;
+    width: 352px;
+    height: 18px;
+    padding: 12px 12px 24px 12px;
+
+  }
+  
+  .filter-input {
+    width: 280px;
+    height: 32px;
+    padding: 8px 16px 8px 12px; /* Adjust padding to make space for the icon */
+    border-radius: 16px;
+    background-color: #FFF;
+    box-sizing: border-box;
+    gap: 8px;
+  }
+  
+  .search-icon {
+    position: absolute;
+    top: 50%;
+    left: 60px;
+    transform: translateY(-50%);
+    pointer-events: none; /* Ensure the icon doesn't block input interactions */
+    color: red; /* Set the icon color to red */
+  }
+  

@@ -1,11 +1,15 @@
-:root {
+#root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  width: 380px;
+  height: 690px;
+  left: 2076px;
+  padding: 4px;
 
-  color-scheme: light dark;
+
   color: rgba(255, 255, 255, 0.87);
-  background-color: #b40d0d;
+  background-color: #DC0A2D;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -39,9 +43,39 @@
     background-color: #ff9005;
   }
   
+.header{
+  flex: content;
+  width: 352px;
+  height: 108px;
+  padding: 12px 12px 24px 12px;
+  gap: 8px;
+}
 
+.pokefilters{
+  display: flex;
+}
+.pokedex img{
+  width: 24px;
+  height: 24px;
+  padding-right: 2%;
+  left: 0.12px
+}
+.pokedex h1{
+  width: 106px;            /* Fixed width */
+  height: 32px;            /* Fixed height */
+  font-family: 'Poppins', sans-serif; /* Font family Poppins */
+  font-weight: 700;        /* Font weight */
+  font-size: 24px;         /* Font size */
+  line-height: 32px;       /* Line height */
+  margin: 0;               /* Reset margin if necessary */
+  overflow: hidden;   
+}
+
+.pokedex{
+  display: flex;
+}
   /* Details Styles */
-.pokemon-details {
+/* .pokemon-details {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -56,52 +90,4 @@
 .pokemon-details h2 {
   margin: 20px 0;
 }
-
-/* Type-specific card backgrounds */
-.pokemon-card {
-  border-radius: 10px;
-  padding: 20px;
-  color: #fff;
-  text-align: center;
-  margin: 10px 0;
-}
-
-.electric {
-  background-color: #ffea70;
-}
-
-.fire {
-  background-color: #ff6f61;
-}
-
-.water {
-  background-color: #4fc3f7;
-}
-
-.grass {
-  background-color: #81c784;
-}
-
-.rock {
-  background-color: #b6a136;
-}
-
-.psychic {
-  background-color: #f48fb1;
-}
-
-.ice {
-  background-color: #b3e5fc;
-}
-
-.fighting {
-  background-color: #d32f2f;
-}
-
-.ghost {
-  background-color: #7e57c2;
-}
-
-.dragon {
-  background-color: #f16e57;
-}
+ */

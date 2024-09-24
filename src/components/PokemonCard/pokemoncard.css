@@ -1,4 +1,40 @@
-.pokemon-grid{
-    background-color: aliceblue;
-    border-radius: 10px;
+
+  .pokemon-card {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+
+    text-align: center;
+    width: 104px;
+    height: 108px;
+    left: 2669px;
+    box-shadow: 0px 1px 3px 1px #00000033;
+    /* Add other styles as needed */
+  }
+  
+
+  
+  .pokemon-card img {
+    max-width: 72px;
+    height: 72px;
+  }
+  
+  .pokemon-card h3 {
+    width: 88px;
+    height: 16px;
+    font-family: 'Poppins', sans-serif;  
+    font-weight: 400;                    
+    font-size: 10px;                     
+    line-height: 16px;                  
+    text-align: center;                 
+    margin: 0;
+  }
+p.id{
+    top: 0%;
+    text-align: right;
+    width: 104px;
+    height: 16px;
+    padding: 4px 8px 0px 8px;
+    gap: 8px;
+    color: black;
 }

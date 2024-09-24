@@ -1,44 +1,9 @@
-/* PokemonList Component Specific Styles */
-.pokemon-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  
-  .pokemon-list .pokemon-item {
-    background-color: white;
-    border: 1px solid #ddd;
-    padding: 10px;
-    width: 180px;
-    border-radius: 10px;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .pokemon-list .pokemon-item:hover {
-    transform: scale(1.05);
-  }
-  
-  .pokemon-list img {
-    width: 100%;
-    border-radius: 10px;
-  }
-  
-  .pokemon-list h3 {
-    font-size: 16px;
-    margin-top: 10px;
-    color: #333;
-  }
-  
-  .pokemon-list button {
-    margin-top: 10px;
-    padding: 5px;
-    background-color: #ffcb05;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .pokemon-list button:hover {
-    background-color: #ff9005;
-  }
-  
+.pokemon-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 4 columns */
+  gap: 8px; /* Adjust gap between grid items */
+  padding: 24px 12px 0px 12px; /* Optional padding */
+  background-color: #FFFFFF;
+  width: 352px;
+  height: 524px;
+}

@@ -1,13 +1,17 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState, useEffect } from 'react';
 import AppReducer from './AppReducer';
 import { GET_ALL_POKEMONS } from '../graphql/queries';
 import { useQuery } from '@apollo/client';
+import { getPokemonsApi, getPokemonDetailsByUrlApi } from "../Api/pokemons";
 // Initial state
 const initialState = {
     pokemons: [],
     favorites: [],
     filterType: '',
   };
+
+
+
 
 // Create context
 export const GlobalContext = createContext(initialState);
@@ -18,7 +22,7 @@ export const GlobalProvider = ({ children }) => {
   const [sortedPokemon, setSortedPokemon] = useState([]);
   const [sortBy, setSortBy] = useState('id'); // Default sorting by ID
   const [filter, setFilter] = useState('');
-
+  const [sortType, setSortType] = useState('name');
   const handleSearch = (e) => {
     setSearchTerm(e.target.value);
   };
@@ -40,11 +44,42 @@ export const GlobalProvider = ({ children }) => {
     setSortBy('name');
   };
 
-//   // Filter based on search input
-//   const filteredPokemon = sortedPokemon.filter((pokemon) =>
-//     pokemon.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-//     pokemon.id.includes(searchTerm)
-//   );
+
+  const [pokemons, setPokemons] = useState([]);
+  console.log("pokemons--->", pokemons);
+
+  useEffect(() => {
+    (async () => {
+      await loadPokemons();
+    })();
+  }, []);
+
+  const loadPokemons = async () => {
+    try {
+      const response = await getPokemonsApi();
+
+      const pokemonsArray = [];
+      for await (const pokemon of response.results) {
+        const pokemonDetails = await getPokemonDetailsByUrlApi(pokemon.url);
+
+        pokemonsArray.push({
+          id: pokemonDetails.id,
+          name: pokemonDetails.name,
+          type: pokemonDetails.types[0].type.name,
+          order: pokemonDetails.order,
+          imagen:
+            pokemonDetails.sprites.other["official-artwork"].front_default,
+        });
+      }
+
+      setPokemons([...pokemons, ...pokemonsArray]);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+
+
   return (
     <GlobalContext.Provider
       value={{
@@ -52,13 +87,11 @@ export const GlobalProvider = ({ children }) => {
         setSearchTerm,
         sortedPokemon, 
         setSortedPokemon,
-        sortBy, 
-        setSortBy,
-        // addFavorite,
-        // removeFavorite,
-        // setFilterType,
         filter, 
         setFilter,
+        sortType,
+        setSortType,
+        pokemons, setPokemons,
       }}
     >
       {children}
