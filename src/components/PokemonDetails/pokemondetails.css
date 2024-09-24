@@ -14,6 +14,30 @@
   padding: 20px;
 }
 
+
+.imgdetail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 20px;
+  position: relative;
+  top: 0px;
+}
+.detailcard{
+  width: 352px;
+  /* height: 412px; */
+  border-radius: 8px;
+  padding: 56px 20px 20px 5px;
+  gap: 16px;
+  background-color: #FFFFFFFF;
+  position: relative;
+  top: -80px;
+}
+
 /* .pokemon-details h2 {
   font-size: 24px;
   margin: 20px 0;
@@ -143,4 +167,154 @@
   height: 100%;
   background-color: #4CAF50;
   border-radius: 4px;
+}
+.detailcard p{
+  border-radius: 45px;
+  padding:2px 8px 2px 8px;
+  text-align: center; 
+  
+}
+.detailcard .poketype{
+  width: 312px;             /* Set width to 312px */
+  height: 20px;            /* Adjust height to hug the content */
+  min-height: 20px;        /* Minimum height of 20px */
+  display: flex;           /* Use Flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center;     /* Center vertically */
+  gap: 16px;               /* Space between items if there are multiple */
+  text-align: center; 
+  }
+
+.detailcard h3{
+  color: black;
+  text-align: center; 
+  width: 312px;
+  height: 20px;
+  gap: 16px;
+  }
+
+
+th, td {
+  width: 27px;
+  height: 16px;
+  padding: 0px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-family: 'Poppins', sans-serif; /* Font: Poppins */
+  font-weight: 700;                   /* Weight: 700 (bold) */
+  font-size: 10px;                    /* Font size: 10px */
+  line-height: 16px;                  /* Line height: 16px */
+  text-align: right; 
+}
+
+th {
+  background-color: #f9f9f9;
+  color: black;
+}
+tr{
+  color: black;
+}
+tr:hover {
+  background-color: #f1f1f1;
+  color: black;
+
+}
+
+.info {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;         
+  gap: 16px;                   
+  width: 312px;
+  height: 48px;
+}
+
+.info-item {
+  display: flex;             
+  align-items: center;
+  width: 103.33px;
+  height: 48px;
+  gap: 4px;
+  flex-direction: column;
+}
+
+.info-item img {
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  top: 12px;
+  left: 20px;
+}
+.info-item-img p {
+  /* margin-right: 8px; */
+  height: 16px;
+  color: #1D1D1D;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;                
+  font-size: 10px;                  
+  line-height: 16px;               
+  text-align: justify; 
+}
+.info-item-img{
+  width: 103.33px;
+  height: 32px;
+  gap: 8px;
+  display: flex;
+}
+
+.border{
+  border-left: 1px solid #1D1D1D; /* Border on the top */
+  border-right: 1px solid #1D1D1D;
+}
+.info-name{
+  width: 103.33px;
+  height: 12px;
+  color: #666666;
+  font-family: 'Poppins', sans-serif; 
+  font-weight: 400;                   
+  font-size: 8px;                     
+  line-height: 12px;                  
+  text-align: center; 
+}
+.info-item-move{
+  width: 103.33px;
+  height: 48px;
+  gap: 4px;
+  color: black;
+}
+.info-item-move p{
+  color: #1D1D1D;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 16px;
+  /* text-align: justify; */
+  margin: 0%;
+  padding: 0%;
+}
+.desccription a{
+  width: 312px;                    
+  height: 60px;                   
+  font-family: 'Poppins', sans-serif; 
+  font-size: 10px;                  
+  line-height: 16px;                
+  text-align: justify;
+  color: #1D1D1D;
+}
+.table-container h2{
+  width: 312px;                     /* Width: 312px */
+  height: 16px;                     /* Height: 16px */
+  font-family: 'Poppins', sans-serif; /* Font: Poppins */
+  font-weight: 700;                 /* Weight: 700 (bold) */
+  font-size: 14px;                  /* Font size: 14px */
+  line-height: 16px;                /* Line height: 16px */
+  text-align: center; 
+  color: #1D1D1D;
+
+}
+.table-container table{
+  width: 312px;
+  height: 96px;
+  gap: 8px;
 }

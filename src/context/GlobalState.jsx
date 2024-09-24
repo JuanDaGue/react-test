@@ -23,6 +23,7 @@ export const GlobalProvider = ({ children }) => {
   const [sortBy, setSortBy] = useState('id'); // Default sorting by ID
   const [filter, setFilter] = useState('');
   const [sortType, setSortType] = useState('name');
+  const [pType, setPType] = useState('');
   const handleSearch = (e) => {
     setSearchTerm(e.target.value);
   };
@@ -91,7 +92,10 @@ export const GlobalProvider = ({ children }) => {
         setFilter,
         sortType,
         setSortType,
-        pokemons, setPokemons,
+        pokemons, 
+        setPokemons,
+        pType,
+        setPType,
       }}
     >
       {children}
