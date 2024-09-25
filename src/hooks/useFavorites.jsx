@@ -1,17 +1,34 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export const useFavorites = () => {
   const [favorites, setFavorites] = useState([]);
 
-  const addFavorite = (pokemon) => {
-    if (!favorites.find(fav => fav.id === pokemon.id)) {
-      setFavorites([...favorites, pokemon]);
+  // Load favorites from localStorage when the component mounts
+  useEffect(() => {
+    const storedFavorites = localStorage.getItem('favorites');
+    if (storedFavorites) {
+      setFavorites(JSON.parse(storedFavorites));
     }
+  }, []);
+
+  // Save favorites to localStorage whenever they change
+  useEffect(() => {
+    localStorage.setItem('favorites', JSON.stringify(favorites));
+  }, [favorites]);
+
+  const addFavorite = (pokemon) => {
+    const newFavorites = [...favorites, pokemon];
+    setFavorites(newFavorites);
   };
 
   const removeFavorite = (id) => {
-    setFavorites(favorites.filter(fav => fav.id !== id));
+    const newFavorites = favorites.filter(pokemon => pokemon.id !== id);
+    setFavorites(newFavorites);
   };
 
-  return { favorites, addFavorite, removeFavorite };
+  return {
+    favorites,
+    addFavorite,
+    removeFavorite,
+  };
 };

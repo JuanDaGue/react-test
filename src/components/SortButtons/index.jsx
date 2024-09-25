@@ -5,7 +5,7 @@ import './buttonfilter.css'
 function SortButtons() {
   const { sortType, setSortType } = useContext(GlobalContext);
   const [visible, setVisible] = useState(false);
-  console.log('sort ->',sortType)
+//   console.log('sort ->',sortType)
   return (
     
     <div className='buttonFilter' onClick={() => setVisible(!visible)}>

@@ -11,3 +11,21 @@
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
   /* border: 1px solid #ccc; */
 }
+.favoritesP{
+  height: 35px;
+  width: 35px;
+  padding: 10%;
+  
+  /* position: absolute;
+  bottom: 8%;
+  left: 25%; */
+}
+
+.favorites-button-container {
+  position: absolute;
+  bottom: 5%; /* Ajusta según sea necesario */
+  width: 350px;
+  display: flex;
+  justify-content: center;
+}
+

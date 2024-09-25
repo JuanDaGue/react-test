@@ -1,15 +1,36 @@
 import React from 'react';
-import './favorites.css'
-const Favorites = ({ favorites }) => {
-  if (favorites.length === 0) return <p>No favorites added yet.</p>;
+import { Link } from 'react-router-dom'; // Import Link
+import { useFavorites } from '../../hooks/useFavorites';
+import PokemonCard from '../PokemonCard';
+import './favorites.css';
+
+const Favorites = () => {
+  const { favorites, removeFavorite } = useFavorites();
+
   return (
-    <div>
-      <h2>Your Favorites</h2>
-      <ul>
-        {favorites.map((pokemon, index) => (
-          <li key={index}>{pokemon.name}</li>
-        ))}
-      </ul>
+    <div className="favorites-page">
+      <h1>Your Favorite Pokémon</h1>
+      <div className="pokemon-grid">
+        {favorites.length > 0 ? (
+          favorites.map(pokemon => (
+            <PokemonCard 
+              key={pokemon.id} 
+              pokemon={pokemon} 
+              isFavorite={true} 
+              onToggleFavorite={() => removeFavorite(pokemon.id)} 
+            />
+          ))
+        ) : (
+          <p>No favorite Pokémon yet!</p>
+        )}
+      </div>
+
+      {/* Button to return to the home page */}
+      <div className="favorites-button-container">
+        <Link to="/">
+          <img src="/pokeball-pokemon.png" alt="pokeball-pokemon" class="favoritesP"/>
+        </Link>
+      </div>
     </div>
   );
 };
