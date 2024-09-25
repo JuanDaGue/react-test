@@ -10,7 +10,7 @@ export default function Header(props) {
     <>
                 <div className='header'>
                         <div className='pokedex'>
-                        <img src="/pokeball.png" alt="Pokeball"         className="pokeball-icon" />
+                        <img src="/Pokeball.png" alt="Pokeball"         className="pokeball-icon" />
                         <h1>Pokémon App</h1>
                         </div>
                         <div className='pokefilters'>
