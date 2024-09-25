@@ -95,5 +95,24 @@
   }
   
   .favorite-button.favorited {
-    background-color: #c7365805;
+    padding: 8px 8px;
+    background-color: #ffffff;
+    border: 10px;
+    border-radius: 25px;
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    position: relative;
+    z-index: 20;
+    top: -50px;
   }
+  .favorite-button.favorited::before {
+    content: "🖤"; 
+    font-size: 8px; 
+    /* margin-right: 10px;  */
+    margin-left: -5px;
+    margin-top: -15px;
+    position: relative;
+    top: -8px;
+  }
+  
