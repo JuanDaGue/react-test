@@ -27,14 +27,15 @@ body{
 
   button {
     margin-left: 10px;
-    padding: 5px 10px;
-    background-color: #ffcb05;
+    padding: 0px;
+    background-color: #DC0A2D;
+    border-radius: 10px;
     border: none;
     cursor: pointer;
   }
   
   button:hover {
-    background-color: #ff9005;
+    background-color: #ff05ac;
   }
   
 

@@ -16,18 +16,15 @@
 
 
 .imgdetail {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 200px;
-  height: 200px;
-  display: flex;
-  justify-content: space-between;
-  padding: 16px 20px;
-  position: relative;
-  top: 0px;
-  z-index: 2;
-  position: relative;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 20px;
+    top: 0px;
+    z-index: 2;
+    position: relative;
 }
 .detailcard{
   width: 352px;
@@ -40,10 +37,6 @@
   top: -80px;
 }
 
-/* .pokemon-details h2 {
-  font-size: 24px;
-  margin: 20px 0;
-} */
 
 .pokemon-details .pokemon-card {
   border-radius: 20px;
@@ -294,7 +287,7 @@ tr:hover {
   font-size: 10px;
   line-height: 16px;
   /* text-align: justify; */
-  margin: 0%;
+  /* margin: 0%; */
   padding: 0%;
 }
 .desccription a{

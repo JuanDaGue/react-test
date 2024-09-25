@@ -19,10 +19,10 @@
   
   .search-icon {
     position: absolute;
-    top: 50%;
-    left: 60px;
+    top: 7%;
+    left: 25px;
     transform: translateY(-50%);
-    pointer-events: none; /* Ensure the icon doesn't block input interactions */
-    color: red; /* Set the icon color to red */
+    pointer-events: none;
+    color: red;
   }
  

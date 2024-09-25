@@ -10,9 +10,16 @@ function SortButtons() {
     <div className='buttonFilter' onClick={() => setVisible(!visible)}>
         <img src="../../public/Vector.png" alt="" />
       {visible && (
-        <div>
-          <button onClick={() => setSortType('name')}>Sort by Name</button>
-          <button onClick={() => setSortType('id')}>Sort by ID</button>
+        <div className='buttonpokemon'>
+            <div className='title2'>
+                <h3>
+                    Sort by
+                </h3>
+            </div>
+            <div className='buttoncontent'>
+                <button onClick={() => setSortType('id')}>Number</button>
+                <button onClick={() => setSortType('name')}>Name</button>
+            </div>
         </div>
       )}
     </div>

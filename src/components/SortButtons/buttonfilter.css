@@ -14,3 +14,49 @@
     top: 2.67px;
     left: 2.46px;
 }
+
+.buttonpokemon{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 113px;
+    height: 132px;
+    top: 60px;
+    left: 247px;
+    border-radius: 12px;
+    border-width: 0px 0px 0px 4px;
+    padding: 0px 4px 4px 4px;
+    z-index: 10;
+    background-color: #DC0A2D;
+}
+.title2{
+    width: 105px;
+    height: 48px;
+    padding: 1px 20px 1px 20px;
+
+}
+.title2 h3{
+    width: 47px;
+    height: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    color: #FFFFFF;
+}
+.buttoncontent{
+    display: flex;
+    flex-direction: column;
+    height: 80px;
+    border-radius: 8px;
+    padding: 16px 20px;
+    gap: 16px;
+    background-color: #FFFFFF;
+}
+.buttoncontent button{
+    width: 16px;
+    height: 16px;
+}
+
+
+

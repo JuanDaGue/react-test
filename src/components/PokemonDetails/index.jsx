@@ -50,9 +50,9 @@ const PokemonDetails = () => {
   //style={{ backgroundColor: color }}
   return (
     <div className='homecard' style={{ backgroundColor: color }}>
-        <img src="../../../public/pokeball2.png" alt="pokeball2.png" className='imgbg'/>
+        <img src="/pokeball2.png" alt="pokeball2.png" className='imgbg'/>
       <div className='title'>
-        <button className='history' onClick={handleHomeButtonClick} style={{ backgroundColor: color }}>    <img  src='../../../public/arrow_back.png' alt="Back Arrow"/></button>
+        <button className='history' onClick={handleHomeButtonClick} style={{ backgroundColor: color }}>    <img  src='/arrow_back.png' alt="Back Arrow"/></button>
         <h2>{pokedetails.name}</h2>
         <p className='pokeid'>{`#0${id}`}</p>
       </div>
