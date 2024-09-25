@@ -9,7 +9,10 @@ const Favorites = () => {
 
   return (
     <div className="favorites-page">
-      <h1>Your Favorite Pokémon</h1>
+      <div className='header'>
+
+        <h1>Your Pokémon</h1>
+      </div>
       <div className="pokemon-grid">
         {favorites.length > 0 ? (
           favorites.map(pokemon => (
