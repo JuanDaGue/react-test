@@ -87,7 +87,7 @@ const PokemonDetails = () => {
         <div className="info">
           <div className="info-item">
             <div className='info-item-img'>
-              <img src="../../public/weight.png" alt="weight icon" /> 
+              <img src="/weight.png" alt="weight icon" /> 
               <p>{`${pokedetails.weight} kg`}</p>
             </div>
             <div className='info-name'>
@@ -96,7 +96,7 @@ const PokemonDetails = () => {
           </div>
           <div className="info-item border">
             <div className='info-item-img '>
-              <img src="../../public/Heigth.png" alt="height icon" />
+              <img src="/Heigth.png" alt="height icon" />
               <p>{`${pokedetails.height} m`}</p>
             </div>
             <div className='info-name'> Heigth
