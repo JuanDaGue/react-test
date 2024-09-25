@@ -28,13 +28,14 @@
 }
 .detailcard{
   width: 352px;
-  /* height: 412px; */
+  height: 345px;
   border-radius: 8px;
   padding: 56px 20px 20px 5px;
   gap: 16px;
   background-color: #FFFFFFFF;
   position: relative;
   top: -80px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -338,7 +339,7 @@ tr:hover {
   display: flex;
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
-  width: 320px;
+  width: 350px;
   /* height: 100%; */
 }
 
@@ -386,4 +387,20 @@ tr:hover {
   left: 0%;
   
 
+}
+
+.nav-button{
+  z-index: 20;
+  width: 24px;
+  height: 24px;
+ color: #f0f0f0; /* Adjust the color as needed */
+  border: none;
+  cursor: pointer;
+  transition: transform 300ms ease-out;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.nav-button:hover {
+  transform: scale(1.1);
+  background-color: #1d1d1d5b;
 }

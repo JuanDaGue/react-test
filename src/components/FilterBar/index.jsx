@@ -4,16 +4,21 @@ import { FaSearch } from 'react-icons/fa';
 import './FilterInput.css';
 const FilterBar = () => {
   const { setFilterType, setSortBy,filter, setFilter  } = useContext(GlobalContext);
+  const handleSearch = () => {
+    console.log('Searching for:', searchTerm);
+  };
   return (
     <div className="filter-input-container">
+      <button className="search-icon" onClick={handleSearch}>
+        <FaSearch className="search-icon" />
+      </button>
       <input
         type="text"
-        placeholder="Filter Pokémon"
+        placeholder="      Pokémon"
         value={filter}
         onChange={(e) => setFilter(e.target.value)}
         className="filter-input"
       />
-      <FaSearch className="search-icon" />
     </div>
   );
 };

@@ -14,30 +14,35 @@ const PokemonList = ({ addFavorite }) => {
 
 
   const { loading, error, data } = useQuery(GET_ALL_POKEMONS);
-  const { filter, pokemons } = useContext(GlobalContext);
-  //console.log('data', data)
+  const { filter, pokemons, sortType } = useContext(GlobalContext);
+  const [sortedPokemons, setSortedPokemons] = useState([]);
+  console.log('data', pokemons)
+
+  useEffect(() => {
+    const sorted = [...pokemons].sort((a, b) => {
+      if (sortType === 'name') {
+        return a.name.localeCompare(b.name);
+      } else if (sortType === 'id') {
+        return a.id.toString().localeCompare(b.id.toString());
+      }
+      return 0;
+    });
+    setSortedPokemons(sorted);
+  }, [pokemons, sortType]);
+
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error loading Pokémon data</p>;
 
-  const filteredPokemons = pokemons.filter(pokemon =>
+  const filteredPokemons = sortedPokemons.filter(pokemon =>
     pokemon.name.toLowerCase().includes(filter.toLowerCase())
   );
+  console.log('sort ->',sortType)
+
 
 
   return (
     
 <div className='homecard'>
-{/* <div className='header'>
-                <div className='pokedex'>
-                  <img src="../../public/pokeball.png" alt="Pokeball"         className="pokeball-icon" />
-                  <h1>Pokémon App</h1>
-                </div>
-                <div className='pokefilters'>
-
-                <FilterBar/>
-                <SortButtons />
-                </div>
-              </div> */}
       <Header/>        
       <div className="pokemon-grid">
         {filteredPokemons

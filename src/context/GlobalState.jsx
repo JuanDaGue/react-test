@@ -47,7 +47,7 @@ export const GlobalProvider = ({ children }) => {
 
 
   const [pokemons, setPokemons] = useState([]);
-  console.log("pokemons--->", pokemons);
+//   console.log("pokemons--->", pokemons);
 
   useEffect(() => {
     (async () => {

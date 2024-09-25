@@ -5,10 +5,11 @@ import './buttonfilter.css'
 function SortButtons() {
   const { sortType, setSortType } = useContext(GlobalContext);
   const [visible, setVisible] = useState(false);
+  console.log('sort ->',sortType)
   return (
     
     <div className='buttonFilter' onClick={() => setVisible(!visible)}>
-        <img src="../../public/Vector.png" alt="" />
+        <img src="/Vector.png" alt="" />
       {visible && (
         <div className='buttonpokemon'>
             <div className='title2'>

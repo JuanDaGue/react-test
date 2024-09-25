@@ -17,15 +17,6 @@ function App() {
     setFavorites([...favorites, pokemon]);
     localStorage.setItem('favorites', JSON.stringify([...favorites, pokemon]));
   };
-  console.log('type', pType)
-// function bg(pType){
-//   if(pType && window.location.href.split('/').pop.length<3){
-//     return `pokemon-detail ${pType}`
-//   }
-//   else{
-//     return ''
-//   }
-// }
   return (
       <GlobalProvider>
         <Router>
