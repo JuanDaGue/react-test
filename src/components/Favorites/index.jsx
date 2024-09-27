@@ -31,7 +31,7 @@ const Favorites = () => {
       {/* Button to return to the home page */}
       <div className="favorites-button-container">
         <Link to="/">
-          <img src="/pokeball-pokemon.png" alt="pokeball-pokemon" class="favoritesP"/>
+          <img src="/pokeball-pokemon.png" alt="pokeball-pokemon" className="favoritesP"/>
         </Link>
       </div>
     </div>
