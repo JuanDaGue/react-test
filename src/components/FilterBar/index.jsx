@@ -3,7 +3,7 @@ import { GlobalContext } from '../../context/GlobalState';
 import { FaSearch } from 'react-icons/fa';
 import './FilterInput.css';
 const FilterBar = () => {
-  const { setFilterType, setSortBy,filter, setFilter  } = useContext(GlobalContext);
+  const { filter, setFilter  } = useContext(GlobalContext);
   const handleSearch = () => {
     console.log('Searching for:', searchTerm);
   };
@@ -14,7 +14,7 @@ const FilterBar = () => {
       </button>
       <input
         type="text"
-        placeholder="      Pokémon"
+        placeholder="Pokémon"
         value={filter}
         onChange={(e) => setFilter(e.target.value)}
         className="filter-input"

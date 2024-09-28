@@ -12,19 +12,20 @@
   .filter-input {
     width: 280px;
     height: 32px;
-    padding: 8px 16px 8px 12px; /* Adjust padding to make space for the icon */
+    padding: 8px 16px 8px 32px; /* Adjust padding to make space for the icon */
     border-radius: 16px;
     background-color: #FFF;
     box-sizing: border-box;
     gap: 8px;
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3); /* Ajusta los valores según tus necesidades */
     border: 1px solid #ccc;
+    
   }
   
   .search-icon {
     position: absolute;
     top: 32px;
-    left: 10px;
+    left: 8px;
     transform: translateY(-50%);
     pointer-events: none;
     color: red;

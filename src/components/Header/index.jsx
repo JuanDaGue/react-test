@@ -1,5 +1,4 @@
 import React from "react";
-import getColorByPokemonType from "../../Api/utils/getColorByPokemonType";
 import FilterBar from "../FilterBar";
 import SortButtons from "../SortButtons";
 import './header.css'

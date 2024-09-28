@@ -1,6 +1,5 @@
 import React, { useContext,  useState } from 'react';
 import { GlobalContext } from '../../context/GlobalState';
-import { FaSort } from 'react-icons/fa';
 import './buttonfilter.css'
 function SortButtons() {
   const { sortType, setSortType } = useContext(GlobalContext);

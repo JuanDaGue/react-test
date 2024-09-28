@@ -13,21 +13,24 @@ const Favorites = () => {
 
         <h1>Your Pokémon</h1>
       </div>
-      <div className="pokemon-grid">
-        {favorites.length > 0 ? (
-          favorites.map(pokemon => (
-            <PokemonCard 
+      <div className='Contentgrid'>
+
+        <div className="pokemon-grid">
+          {favorites.length > 0 ? (
+            favorites.map(pokemon => (
+              <PokemonCard 
               key={pokemon.id} 
               pokemon={pokemon} 
               isFavorite={true} 
               onToggleFavorite={() => removeFavorite(pokemon.id)} 
-            />
-          ))
-        ) : (
-          <p>No favorite Pokémon yet!</p>
-        )}
-      </div>
+              />
+            ))
+          ) : (
+            <p>No favorite Pokémon yet!</p>
+          )}
+        </div>
 
+      </div>
       {/* Button to return to the home page */}
       <div className="favorites-button-container">
         <Link to="/">

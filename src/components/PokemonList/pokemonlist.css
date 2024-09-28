@@ -1,15 +1,32 @@
 .pokemon-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); 
-  gap: 8px; 
-  padding: 24px 12px 0px 12px; 
-  background-color: #FFFFFF;
-  width: 352px;
-  height: 524px;
-  align-content: flex-start;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  padding: 20px 1px 8px 2px;
+  width: 350px;
+  height: 340px;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
   border-radius: 8px;
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
-  /* border: 1px solid #ccc; */
+}
+
+
+.Contentgrid {
+    margin: 0%;
+    /* padding: 24px 12px 0px 12px; */
+    background-color: #FFFFFF;
+    width: 355px;
+    height: 535px;
+    align-content: flex-start;
+    border-radius: 8px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    border: 1px solid #ccc;
+}
+
+
+.pokemon-grid::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
 }
 .favoritesP{
   height: 35px;

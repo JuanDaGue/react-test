@@ -1,6 +1,4 @@
 import React, { useState, useContext, useEffect } from 'react';
-import { useQuery } from '@apollo/client';
-import { GET_ALL_POKEMONS } from '../../graphql/queries';
 import './pokemonlist.css';
 import PokemonCard from '../PokemonCard';
 import { GlobalContext } from '../../context/GlobalState';
@@ -19,7 +17,7 @@ const PokemonList = () => {
     }
   };
 
-  const { loading, error, data } = useQuery(GET_ALL_POKEMONS);
+  // const { loading, error, data } = useQuery(GET_ALL_POKEMONS);
   const { filter, pokemons, sortType } = useContext(GlobalContext);
   const [sortedPokemons, setSortedPokemons] = useState([]);
 
@@ -35,8 +33,9 @@ const PokemonList = () => {
     setSortedPokemons(sorted);
   }, [pokemons, sortType]);
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error loading Pokémon data</p>;
+
+  // if (loading) return <p>Loading...</p>;
+  // if (error) return <p>Error loading Pokémon data</p>;
 
   const filteredPokemons = sortedPokemons.filter(pokemon =>
     pokemon.name.toLowerCase().includes(filter.toLowerCase())
@@ -45,21 +44,23 @@ const PokemonList = () => {
   return (
     <div className='homecard'>
       <Header />
-      <div className="pokemon-grid">
-        {filteredPokemons.map(pokemon => (
-          <PokemonCard 
-            key={pokemon.id} 
-            pokemon={pokemon} 
-            isFavorite={favorites.find(fav => fav.id === pokemon.id)} 
-            onToggleFavorite={() => handleToggleFavorite(pokemon)} 
-          />
-        ))}
+      <div className='Contentgrid'>
+        <div className="pokemon-grid">
+          {filteredPokemons.map(pokemon => (
+            <PokemonCard 
+              key={pokemon.id} 
+              pokemon={pokemon} 
+              isFavorite={favorites.find(fav => fav.id === pokemon.id)} 
+              onToggleFavorite={() => handleToggleFavorite(pokemon)} 
+            />
+          ))}
+        </div>
       </div>
       
       {/* Favorites button container */}
       <div className="favorites-button-container">
         <Link to="/favorites">
-        <img src="/pokeball-pokemon.png" alt="pokeball-pokemon" className='favoritesP'/>
+          <img src="/pokeball-pokemon.png" alt="pokeball-pokemon" className='favoritesP'/>
         </Link>
       </div>
     </div>

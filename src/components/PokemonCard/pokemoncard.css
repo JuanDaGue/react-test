@@ -21,7 +21,7 @@
     max-width: 72px;
     height: 72px;
     position: relative;
-    z-index: 20;
+    z-index: 2;
   }
   
   .pokemon-card h3 {
@@ -42,24 +42,24 @@
     background-color: #EFEFEF;
     border-radius: 7px;
     position: relative;           /* Posición relativa para ajustar su desplazamiento */
-    top: -20px;
+    top: -25px;
     z-index: 1;             
   }
 
 
   h6.id{
-    position: absolute;
+    position: relative;
     padding: 0%;
     margin: 0%;
     text-align: right;
     width: 90px;
-    height: 16px;
+    height: 0px;
     padding: 4px 8px 0px 8px;
     gap: 8px;
-    font-family: 'Poppins', sans-serif;  /* Fuente Poppins */
-    font-weight: 400;                    /* Peso de la fuente: normal */
-    font-size: 8px;                      /* Tamaño de la fuente: 8px */
-    line-height: 12px;                   /* Altura de la línea: 12px */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 12px;
     text-align: righ;
     color: #666666;
 }

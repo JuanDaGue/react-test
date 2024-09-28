@@ -26,11 +26,11 @@
     z-index: 2;
     position: relative;
 }
-.detailcard{
+.detailcard {
   width: 352px;
-  height: 345px;
+  height: 335px;
   border-radius: 8px;
-  padding: 56px 20px 20px 5px;
+  padding: 56px 2px 20px 5px;
   gap: 16px;
   background-color: #FFFFFFFF;
   position: relative;
@@ -403,4 +403,8 @@ tr:hover {
 .nav-button:hover {
   transform: scale(1.1);
   background-color: #1d1d1d5b;
+}
+.desccription{
+  width: 340px;
+  height: 50px;
 }
