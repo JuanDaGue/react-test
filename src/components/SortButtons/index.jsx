@@ -4,11 +4,16 @@ import './buttonfilter.css'
 function SortButtons() {
   const { sortType, setSortType } = useContext(GlobalContext);
   const [visible, setVisible] = useState(false);
-//   console.log('sort ->',sortType)
+  const chooseIcon = (sortType)=>{
+    if(sortType === 'id'){return <img src="/Vector.png" alt="vector" />}
+    else if(sortType === 'name'){
+      return <img src="/text_format.png" alt="name" />
+    }
+  }
   return (
     
     <div className='buttonFilter' onClick={() => setVisible(!visible)}>
-        <img src="/Vector.png" alt="" />
+        {chooseIcon(sortType)}
       {visible && (
         <div className='buttonpokemon'>
             <div className='title2'>

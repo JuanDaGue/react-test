@@ -56,3 +56,15 @@
   margin: 0;
   overflow: hidden;
 }
+
+.pokemon-grid p {
+  color: #dc0a2d;
+  /* align-items: center; */
+  /* display: contents; */
+  font-size: larger;
+  width: 300px;
+  position: relative;
+  /* right: 200px; */
+  padding: 40px;
+  font-family: 'Poppins', sans-serif;
+}
